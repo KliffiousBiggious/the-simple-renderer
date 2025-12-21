@@ -1,11 +1,7 @@
-#version 450 core      
+#version 450 core
+layout(location = 0) in vec2 position;
 
-
-void main (void) 
+void main()
 {
-const vec4 vertices[] = vec4[](vec4( 0.25, -0.25, 0.5, 1.0), 
-                               vec4(-0.25, -0.25, 0.5, 1.0), 
-                               vec4( 0.25,  0.25, 0.5, 1.0));
-gl_Position = vertices[gl_VertexID];                         
-
-} 
+    gl_Position = vec4(position, 0.0, 1.0);
+}
